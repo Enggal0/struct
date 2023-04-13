@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+struct Buah {
+  string nama;  
+  int jumlah;     
+  float harga;      
+};
+
+int main() {
+  Buah apel;
+  apel.nama = "Apel";
+  apel.jumlah = 5;
+  apel.harga = 2.5;
+
+  cout << "Nama Buah: " << apel.nama << std::endl;
+  cout << "Jumlah Buah: " << apel.jumlah << std::endl;
+  cout << "Harga Buah: " << apel.harga << std::endl;
+
+  return 0;
+}
