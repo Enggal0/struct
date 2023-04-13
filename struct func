@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Deklarasi struct Mahasiswa
+struct Mahasiswa {
+    string nama;
+    int nilai;
+    char hurufMutu;
+};
+
+// Fungsi untuk menghitung huruf mutu (grade) berdasarkan nilai
+char hitungHurufMutu(int nilai) {
+    char hurufMutu;
+    if (nilai >= 85) {
+        hurufMutu = 'A';
+    } else if (nilai >= 70) {
+        hurufMutu = 'B';
+    } else if (nilai >= 55) {
+        hurufMutu = 'C';
+    } else if (nilai >= 40) {
+        hurufMutu = 'D';
+    } else {
+        hurufMutu = 'E';
+    }
+    return hurufMutu;
+}
+
+int main() {
+    // Deklarasi dan inisialisasi objek Mahasiswa dalam array
+    Mahasiswa mhs[3];
+    mhs[0].nama = "John";
+    mhs[0].nilai = 80;
+    mhs[0].hurufMutu = hitungHurufMutu(mhs[0].nilai);
+    
+    mhs[1].nama = "Jane";
+    mhs[1].nilai = 75;
+    mhs[1].hurufMutu = hitungHurufMutu(mhs[1].nilai);
+    
+    mhs[2].nama = "Tom";
+    mhs[2].nilai = 78;
+    mhs[2].hurufMutu = hitungHurufMutu(mhs[2].nilai);
+    
+    // Menampilkan data Mahasiswa dan huruf mutu menggunakan fungsi dalam struct dan array
+    for (int i = 0; i < 3; i++) {
+        cout << "Data Mahasiswa " << i+1 << ":" << endl;
+        cout << "Nama: " << mhs[i].nama << endl;
+        cout << "Nilai: " << mhs[i].nilai << endl;
+        cout << "Huruf Mutu: " << mhs[i].hurufMutu << endl;
+        cout << endl;
+    }
+
+    return 0;
+}
