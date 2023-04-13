@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+
+using namespace std; 
+
+struct Mahasiswa {
+  string nama;
+  int umur;
+  float ipk;
+};
+
+int main() {
+  Mahasiswa arrMahasiswa[3]; 
+  
+  for (int i = 0; i < 3; i++) {
+    cout << "Masukkan data mahasiswa ke-" << i + 1 << endl;
+    cout << "Nama: ";
+    cin >> arrMahasiswa[i].nama;
+    cout << "Umur: ";
+    cin >> arrMahasiswa[i].umur;
+    cout << "IPK: ";
+    cin >> arrMahasiswa[i].ipk;
+    cout << endl;
+  }
+
+ 
+  cout << "Data Mahasiswa:" << endl;
+  for (int i = 0; i < 3; i++) {
+    cout << "Mahasiswa ke-" << i + 1 << endl;
+    cout << "Nama: " << arrMahasiswa[i].nama << endl;
+    cout << "Umur: " << arrMahasiswa[i].umur << " tahun" << endl;
+    cout << "IPK: " << arrMahasiswa[i].ipk << endl;
+    cout << endl;
+  }
+
+  return 0;
+}
